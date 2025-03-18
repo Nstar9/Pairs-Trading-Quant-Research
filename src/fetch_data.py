@@ -15,8 +15,9 @@ tech_stocks = [
     "ORCL", "IBM", "PYPL", "UBER", "SNAP", "SHOP"
 ]
 
+
 # 📅 Pulling 6 years of data - decent range for analysis
-start_date = "2019-03-16"
+start_date = "2005-03-16"
 end_date = "2025-03-16"
 
 print("📥 Fetching stock data... Might take a sec 🕒")
@@ -36,3 +37,5 @@ else:
 csv_path = "../data/tech_stocks_data.csv"
 data.to_csv(csv_path)
 print(f"✅ Data saved successfully at '{csv_path}'")
+
+data.dropna(inplace=True)
